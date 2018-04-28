@@ -27,7 +27,7 @@ class RequestLogger
         $request = RequestLog::create([
             'url' => $request->getPathInfo(),
             'method' => $request->method(),
-            'response time' => time() - $requestTime->timestamp,
+            'response_time' => time() - $requestTime->timestamp,
             'day' => date('l', $requestTime->timestamp),
             'hour' => $requestTime->hour,
         ]);
