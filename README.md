@@ -1,14 +1,47 @@
-# laravel-mongodb-starter
-This is a fresh Laravel install, configured to use MongoDB out of the box.
+# laravel-realtime-analytics-dashboard
+Laravel app that uses an "after" middleware to track all requests and display analytics in realtime in a dashboard
 
-Just extend your models from `Jenssegers\Mongodb\Eloquent\Model`
+## Prerequisites
+- PHP >= 7.2
+- Composer
+- MongoDB 3.4 or greater
+- A [Pusher account](https://pusher.com/signup) and [Pusher app credentials](http://dashboard.pusher.com/)
 
-```php
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+## Getting started
+Clone the project and install dependencies:
 
-class Comment extends Eloquent {
-  // ...
-}
+```bash
+git clone https://github.com/shalvah/laravel-realtime-analytics-dashboard
+cd shoots && composer install && npm install
 ```
 
-See https://github.com/jenssegers/laravel-mongodb for more info
+Copy the `.env.example` file to a `.env` file. Add your Pusher app credentials to this file:
+```
+PUSHER_APP_ID=your-app-id
+PUSHER_APP_KEY=your-app-key
+PUSHER_APP_SECRET=your-app-secret
+PUSHER_APP_CLUSTER=your-app-cluster
+```
+
+If your MongoDB server requires a username and password, add those in your `.env` file as the `DB_USERNAME` and `DB_PASSWORD` respectively.
+
+Compile assets:
+
+```bash
+npm run dev
+```
+
+Then:
+
+```bash
+# generate an application key
+php artisan key:generate
+
+# start the app
+php artisan serve
+```
+## Built With
+
+* [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
+* [Laravel](http://laravel.com) - the PHP framework for web artisans :sunglasses:
+* [Vue](https://vuejs.org) - The progressive web framework
