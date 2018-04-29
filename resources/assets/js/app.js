@@ -16,9 +16,9 @@ const app = new Vue({
 });
 
 Echo.channel('analytics')
-    .listen('AnalyticsUpdated', (e) => {
-        console.log(e)
-        Object.keys(e.analytics).forEach(stat => {
-            window.analytics[stat] = e.analytics[stat];
+    .listen('AnalyticsUpdated', (event) => {
+        console.log(event)
+        Object.keys(event.analytics).forEach(stat => {
+            window.analytics[stat] = event.analytics[stat];
         })
     });

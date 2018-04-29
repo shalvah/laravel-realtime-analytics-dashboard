@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Busiest days of the week</h5>
                     <div class="card-text" style="width: 18rem;" v-for="day in busiestDays">
-                        <ol class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 @{{ day._id }} (@{{ day.numberOfRequests }} requests)
                             </li>
@@ -45,7 +45,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Busiest hours of day</h5>
                     <div class="card-text" style="width: 18rem;" v-for="hour in busiestHours">
-                        <ol class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 @{{ hour._id }} (@{{ hour.numberOfRequests }} requests)
                             </li>
@@ -62,7 +62,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Most visited routes</h5>
                     <div class="card-text" style="width: 18rem;" v-for="route in statsPerRoute">
-                        <ol class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 @{{ route._id.method }} @{{ route._id.url }} (@{{ route.numberOfRequests }} requests)
                             </li>
