@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Events\AnalyticsUpdated;
 use App\Models\RequestLog;
 use Carbon\Carbon;
 use Closure;
@@ -32,6 +33,7 @@ class RequestLogger
             'hour' => $requestTime->hour,
         ]);
 
+        broadcast(new AnalyticsUpdated());
         return $response;
     }
 }
