@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/analytics', 'AnalyticsController@index')->name('analytics.dashboard');
+
+Route::get('/wait/{seconds}', function ($seconds) {
+    sleep($seconds);
+    return "Here ya go! Waited for $seconds seconds";
+});
