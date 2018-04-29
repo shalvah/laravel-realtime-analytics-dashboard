@@ -12,7 +12,7 @@ Clone the project and install dependencies:
 
 ```bash
 git clone https://github.com/shalvah/laravel-realtime-analytics-dashboard
-cd shoots && composer install && npm install
+cd laravel-realtime-analytics-dashboard && composer install && npm install
 ```
 
 Copy the `.env.example` file to a `.env` file. Add your Pusher app credentials to this file:
