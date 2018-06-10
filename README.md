@@ -1,6 +1,8 @@
 # laravel-realtime-analytics-dashboard
 Laravel app that uses an "after" middleware to track all requests and display analytics in realtime in a dashboard
 
+[View tutorial](https://pusher.com/tutorials/realtime-analytics-dashboard-laravel)
+
 ## Prerequisites
 - PHP >= 7.2
 - Composer
